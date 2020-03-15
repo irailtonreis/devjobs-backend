@@ -1,0 +1,11 @@
+{
+  "name": "devjobs-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:irailtonreis/devjobs-backend.git",
+  "author": "irailtonreis <irailton.oliveira91@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^2.1.1"
+  }
+}
