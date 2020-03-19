@@ -6,6 +6,7 @@
   "author": "irailtonreis <irailton.oliveira91@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "crawler": "^1.2.1",
     "puppeteer": "^2.1.1"
   }
 }
