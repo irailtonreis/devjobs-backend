@@ -8,5 +8,8 @@
   "dependencies": {
     "crawler": "^1.2.1",
     "puppeteer": "^2.1.1"
+  },
+  "scripts": {
+    "search": "node crawler/crawler.js"
   }
 }
