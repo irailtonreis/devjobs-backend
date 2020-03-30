@@ -1,4 +1,5 @@
 const puppeteer = require("puppeteer");
+const save = require('./saveToDB');
 
 const crawler = async tech => {
   const browser = await puppeteer.launch({
@@ -36,6 +37,14 @@ const crawler = async tech => {
 
 const techs = ["php", "react", "nodejs"];
 
-techs.map(async tech =>
-  console.log(`Jobs encontrados para ${tech}: ` + (await crawler(tech)))
-);
+
+  techs.map(async tech =>{
+   const value = await crawler(tech)
+   const items = { name: tech, quantity: value }
+   await save(items);
+   
+});
+
+
+
+
