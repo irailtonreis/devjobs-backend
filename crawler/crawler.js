@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
-const save = require('./saveToDB');
+
+const VagaController = require('./VagaController');
 
 const crawler = async tech => {
   const browser = await puppeteer.launch({
@@ -32,17 +33,18 @@ const crawler = async tech => {
       .innerText;
   });
 
+ 
   return jobsCounter;
 };
+
 
 const techs = ["php", "react", "nodejs"];
 
 
   techs.map(async tech =>{
-   const value = await crawler(tech)
-   const items = { name: tech, quantity: value }
-   await save(items);
-   
+   const value = await crawler(tech);
+   const item = { name: tech, quantity: value }
+   await VagaController.store(item);
 });
 
 
