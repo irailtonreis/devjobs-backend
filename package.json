@@ -7,6 +7,10 @@
   "license": "MIT",
   "dependencies": {
     "crawler": "^1.2.1",
+    "mongoose": "^5.9.6",
     "puppeteer": "^2.1.1"
+  },
+  "scripts": {
+    "search": "node crawler/crawler.js"
   }
 }
